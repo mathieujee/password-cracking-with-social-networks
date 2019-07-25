@@ -14,8 +14,6 @@ class AboutSpider(scrapy.Spider):
 
     def __init__(self, user_id=None, *args, **kwargs):
         super(AboutSpider, self).__init__(*args, **kwargs)
-        # start_urls = ['https://mbasic.facebook.com/' + USERNAME + '/about']
-        # scrap_urls = ['https://mbasic.facebook.com/' + USERNAME + '/about']
         self.scrap_urls = ['https://mbasic.facebook.com/' + user_id + '?v=info']
 
     def parse(self, response):

@@ -10,8 +10,6 @@ from utils.setup import *
 class FamilySpider(scrapy.Spider):
     name = "family_spider"
     start_urls = ['https://www.facebook.com/']
-    #scrap_urls = ['https://mbasic.facebook.com/' + USERNAME + '/about']
-    #scrap_urls = ['https://mbasic.facebook.com/' + USER_ID]
     family_members_profile_url_array = []
 
     def __init__(self, user_id=None, *args, **kwargs):

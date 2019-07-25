@@ -9,7 +9,6 @@ from utils.facebookUrls import generate_posts_url
 class PostSpider(scrapy.Spider):
     name = "posts_spider"
     start_urls = ['https://www.facebook.com/']
-    #scrap_urls = [generate_posts_url(USER_ID)]
 
     def __init__(self, user_id=None, *args, **kwargs):
         super(PostSpider, self).__init__(*args, **kwargs)
@@ -86,7 +85,7 @@ class PostSpider(scrapy.Spider):
                 extracted_data = clean_html_text(extracted_data)
                 if extracted_data != "":
                     self.logger.info("post content: " + extracted_data)
-                    write_to_file('posts.csv', [extracted_data])
+                    write_to_file(POSTS_FILENAME, extracted_data)
                     yield {
                         '..........content': extracted_data,
                     }
