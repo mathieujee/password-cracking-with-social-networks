@@ -1,0 +1,117 @@
+## do nothing
+:
+
+## reverse
+r
+
+## duplicate entire word
+d
+
+## duplicate entire word reversed
+f
+
+## rotations
+{
+{{
+{{{
+{{{{
+{{{{{
+{{{{{{
+{{{{{{{
+
+}
+}}
+}}}
+}}}}
+}}}}}
+}}}}}}
+}}}}}}}
+
+## delete year first 2 digits (ex: 19500101 => 500101)
+O02
+}} D2 D2
+}}}} D4 D4
+
+## delete day first digit (ex: 19500101 => 1950011)
+D4
+}} D6
+}}}} D0
+
+## delete month first digit (ex: 19500101 => 1950101)
+D6
+}} D0
+}}}} D2
+
+## combine them
+O02 D2
+O02 D4
+D4 D5
+
+## insert same char at strategic positions (ex: 1950.01.01)
+## charset = [.:,;-_+*#/$!]
+i4. i7.
+i4: i7:
+i4, i7,
+i4; i7;
+i4- i7-
+i4_ i7_
+i4+ i7+
+i4* i7*
+i4# i7#
+i4/ i7/
+i4$ i7$
+i4! i7!
+
+## same thing but reversed
+r i2. i5.
+r i2: i5:
+r i2, i5,
+r i2; i5;
+r i2- i5-
+r i2_ i5_
+r i2+ i5+
+r i2* i5*
+r i2# i5#
+r i2/ i5/
+r i2$ i5$
+r i2! i5!
+
+## same thing but different order (ex: 01.01.1950)
+}}}} i2. i5.
+}}}} i2: i5:
+}}}} i2, i5,
+}}}} i2; i5;
+}}}} i2- i5-
+}}}} i2_ i5_
+}}}} i2+ i5+
+}}}} i2* i5*
+}}}} i2# i5#
+}}}} i2/ i5/
+}}}} i2$ i5$
+}}}} i2! i5!
+
+## same thing but different order (ex: 01.1950.01)
+}} i2. i7.
+}} i2: i7:
+}} i2, i7,
+}} i2; i7;
+}} i2- i7-
+}} i2_ i7_
+}} i2+ i7+
+}} i2* i7*
+}} i2# i7#
+}} i2/ i7/
+}} i2$ i7$
+}} i2! i7!
+
+## keep only the year
+D4 D4 D4 D4
+
+## keep only the month
+D0 D0 D0 D0 D2 D2
+
+## keep only the day
+D0 D0 D0 D0 D0 D0
+
+
+
