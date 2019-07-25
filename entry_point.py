@@ -5,35 +5,31 @@ import os.path
 
 from tqdm import tqdm
 from twisted.internet import reactor, defer
-from facebookCrawler.spiders import about_spider, family_spider, likes_spider, posts_spider#, login
+from facebookCrawler.spiders import about_spider, family_spider, likes_spider, posts_spider
 from utils.setup import *
 from utils.hashcatUtils import *
 from utils.fileUtils import remove_duplicate_lines_from_file
 
-from subprocess import call
-from scrapy.crawler import CrawlerProcess, CrawlerRunner
+from scrapy.crawler import CrawlerRunner
 from scrapy.utils.log import configure_logging
 # src: https://stackoverflow.com/questions/47427271/scrapy-running-multiple-spiders-from-the-same-python-process-via-cmdline-fails
 
 
 if len(sys.argv) > 1:
 
-
-
-    """configure_logging()
+    configure_logging()
     runner = CrawlerRunner()
 
     @defer.inlineCallbacks
     def crawl():
-        # yield runner.crawl(login.LoginSpider)
         yield runner.crawl(about_spider.AboutSpider, user_id=sys.argv[1])
         yield runner.crawl(likes_spider.LikeSpider, user_id=sys.argv[1])
         yield runner.crawl(family_spider.FamilySpider, user_id=sys.argv[1])
-        # yield runner.crawl(posts_spider.PostSpider, user_id=sys.argv[1])
+        #yield runner.crawl(posts_spider.PostSpider, user_id=sys.argv[1])
         reactor.stop()
 
     crawl()
-    reactor.run()"""
+    reactor.run()
 
     # Example of hashcat complete command:
     # hashcat --force -m 0 hash.txt wordlists/birth_date.txt -r rules/birth_date_rules.rule -o cracked.txt
