@@ -20,12 +20,11 @@ if len(sys.argv) > 1:
 
 
 
-    """configure_logging()
+    configure_logging()
     runner = CrawlerRunner()
 
     @defer.inlineCallbacks
     def crawl():
-        # yield runner.crawl(login.LoginSpider)
         yield runner.crawl(about_spider.AboutSpider, user_id=sys.argv[1])
         yield runner.crawl(likes_spider.LikeSpider, user_id=sys.argv[1])
         yield runner.crawl(family_spider.FamilySpider, user_id=sys.argv[1])
@@ -33,7 +32,7 @@ if len(sys.argv) > 1:
         reactor.stop()
 
     crawl()
-    reactor.run()"""
+    reactor.run()
 
     # Example of hashcat complete command:
     # hashcat --force -m 0 hash.txt wordlists/birth_date.txt -r rules/birth_date_rules.rule -o cracked.txt
