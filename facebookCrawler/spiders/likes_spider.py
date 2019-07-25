@@ -8,8 +8,6 @@ from utils.setup import *
 class LikeSpider(scrapy.Spider):
     name = "likes_spider"
     start_urls = ['https://www.facebook.com/']
-    #scrap_urls = ['https://mbasic.facebook.com/' + USERNAME + '?v=likes']
-    #scrap_urls = ['https://mbasic.facebook.com/' + USER_ID + '?v=likes']
 
     def __init__(self, user_id=None, *args, **kwargs):
         super(LikeSpider, self).__init__(*args, **kwargs)
@@ -42,10 +40,6 @@ class LikeSpider(scrapy.Spider):
         )
 
     def after_login(self, response):
-
-        """remove_file('response.html')
-        file = open('response.html', mode='w')
-        file.write(str(response.body))"""
 
         remove_file(LIKES_FILENAME)
 
