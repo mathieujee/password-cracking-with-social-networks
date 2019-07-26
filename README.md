@@ -214,7 +214,7 @@ sudo apt install python3-pip
 
 ## Setup your fake Facebook account
 
-- Add the email and passowrd of your fake Facebook account in `./utils/setup.py`:
+- Add the email and password of your fake Facebook account in `./utils/setup.py`:
   ```python
   # Email used to login on the Facebook account
   EMAIL = 'YOUR@EMAIL.ADDRESS'
