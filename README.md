@@ -212,8 +212,17 @@ sudo apt install python3-pip
 
   - https://hashcat.net/wiki/doku.php?id=example_hashes
 
+## Setup your fake Facebook account
 
+- Add the email and passowrd of your fake Facebook account in `./utils/setup.py`:
+  ```python
+  # Email used to login on the Facebook account
+  EMAIL = 'YOUR@EMAIL.ADDRESS'
 
+  # Password used to login on the Facebook account
+  PASSWORD = 'YOUR_PASSWORD'
+  ```
+  
 ## Launch the attack
 
 ```bash
